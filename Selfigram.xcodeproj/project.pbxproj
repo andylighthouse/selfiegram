@@ -14,6 +14,10 @@
 		A17A07111EB19AA2000E109C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A17A070F1EB19AA2000E109C /* LaunchScreen.storyboard */; };
 		A17A071C1EB19AA2000E109C /* SelfigramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A071B1EB19AA2000E109C /* SelfigramTests.swift */; };
 		A17A07271EB19AA2000E109C /* SelfigramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17A07261EB19AA2000E109C /* SelfigramUITests.swift */; };
+		A18B3C521EB311650044BDB3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C511EB311650044BDB3 /* User.swift */; };
+		A18B3C541EB311760044BDB3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C531EB311760044BDB3 /* Post.swift */; };
+		A18B3C561EB3159D0044BDB3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C551EB3159D0044BDB3 /* FeedViewController.swift */; };
+		A1DC18FE1EB1D9F100FE5FA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DC18FD1EB1D9F100FE5FA3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		A17A07221EB19AA2000E109C /* SelfigramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SelfigramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A17A07261EB19AA2000E109C /* SelfigramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfigramUITests.swift; sourceTree = "<group>"; };
 		A17A07281EB19AA2000E109C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A18B3C511EB311650044BDB3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A18B3C531EB311760044BDB3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		A18B3C551EB3159D0044BDB3 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		A1DC18FD1EB1D9F100FE5FA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,10 @@
 				A17A07061EB19AA2000E109C /* AppDelegate.swift */,
 				A17A07081EB19AA2000E109C /* ViewController.swift */,
 				A17A070A1EB19AA2000E109C /* Main.storyboard */,
+				A1DC18FD1EB1D9F100FE5FA3 /* ProfileViewController.swift */,
+				A18B3C551EB3159D0044BDB3 /* FeedViewController.swift */,
+				A18B3C511EB311650044BDB3 /* User.swift */,
+				A18B3C531EB311760044BDB3 /* Post.swift */,
 				A17A070D1EB19AA2000E109C /* Assets.xcassets */,
 				A17A070F1EB19AA2000E109C /* LaunchScreen.storyboard */,
 				A17A07121EB19AA2000E109C /* Info.plist */,
@@ -193,6 +205,7 @@
 				TargetAttributes = {
 					A17A07021EB19AA2000E109C = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = NS5BHZ2C5V;
 						ProvisioningStyle = Automatic;
 					};
 					A17A07161EB19AA2000E109C = {
@@ -259,7 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A18B3C521EB311650044BDB3 /* User.swift in Sources */,
+				A1DC18FE1EB1D9F100FE5FA3 /* ProfileViewController.swift in Sources */,
+				A18B3C541EB311760044BDB3 /* Post.swift in Sources */,
 				A17A07091EB19AA2000E109C /* ViewController.swift in Sources */,
+				A18B3C561EB3159D0044BDB3 /* FeedViewController.swift in Sources */,
 				A17A07071EB19AA2000E109C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NS5BHZ2C5V;
 				INFOPLIST_FILE = Selfigram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andy.Selfigram;
@@ -426,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = NS5BHZ2C5V;
 				INFOPLIST_FILE = Selfigram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = andy.Selfigram;
@@ -507,6 +526,7 @@
 				A17A072D1EB19AA2000E109C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A17A072E1EB19AA2000E109C /* Build configuration list for PBXNativeTarget "SelfigramTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +535,7 @@
 				A17A07301EB19AA2000E109C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A17A07311EB19AA2000E109C /* Build configuration list for PBXNativeTarget "SelfigramUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +544,7 @@
 				A17A07331EB19AA2000E109C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

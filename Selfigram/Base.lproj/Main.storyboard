@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="dUb-jP-4yy">
             <objects>
-                <viewController id="ShR-ts-P79" sceneMemberID="viewController">
+                <viewController id="ShR-ts-P79" customClass="ProfileViewController" customModule="Selfigram" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dBr-Kc-ESa"/>
                         <viewControllerLayoutGuide type="bottom" id="sl6-Mh-hAR"/>
@@ -20,9 +20,44 @@
                     <view key="view" contentMode="scaleToFill" id="3Ne-En-rCa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fk1-EU-Mu7" customClass="Feed">
+                                <rect key="frame" x="97" y="110" width="180" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="EfF-sE-1cr"/>
+                                    <constraint firstAttribute="height" constant="185" id="cAx-LW-W4r"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcw-KQ-dWV">
+                                <rect key="frame" x="147.5" y="323" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXg-0A-T3f">
+                                <rect key="frame" x="57" y="265" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="CameraButtonPressed:" destination="ShR-ts-P79" eventType="touchUpInside" id="faO-4u-W8b"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fk1-EU-Mu7" firstAttribute="top" secondItem="dBr-Kc-ESa" secondAttribute="bottom" constant="46" id="NwN-NH-ND5"/>
+                            <constraint firstItem="rcw-KQ-dWV" firstAttribute="centerX" secondItem="3Ne-En-rCa" secondAttribute="centerX" id="Shi-hT-7hc"/>
+                            <constraint firstItem="fk1-EU-Mu7" firstAttribute="centerX" secondItem="3Ne-En-rCa" secondAttribute="centerX" id="dXg-0S-oap"/>
+                            <constraint firstItem="aXg-0A-T3f" firstAttribute="top" secondItem="fk1-EU-Mu7" secondAttribute="bottom" constant="-8" id="hbr-0q-tgD"/>
+                            <constraint firstItem="fk1-EU-Mu7" firstAttribute="leading" secondItem="aXg-0A-T3f" secondAttribute="trailing" constant="-29" id="mbI-3v-fnT"/>
+                            <constraint firstItem="rcw-KQ-dWV" firstAttribute="top" secondItem="fk1-EU-Mu7" secondAttribute="bottom" constant="28" id="rwN-ZD-nrc"/>
+                            <constraint firstItem="aXg-0A-T3f" firstAttribute="top" secondItem="fk1-EU-Mu7" secondAttribute="bottom" constant="-18" id="zmH-jf-cdJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="J5k-6a-efI"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="fk1-EU-Mu7" id="Vim-IQ-Tuc"/>
+                        <outlet property="usernameLabel" destination="rcw-KQ-dWV" id="2fC-hb-WDc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lII-fj-D94" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jXX-ND-w5U" id="43J-p9-Dkl">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -83,21 +118,21 @@
             </objects>
             <point key="canvasLocation" x="2012" y="1027.736131934033"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Feed View Controller-->
         <scene sceneID="pfu-Aw-Qe0">
             <objects>
-                <tableViewController id="rQo-rI-YzQ" sceneMemberID="viewController">
+                <tableViewController id="rQo-rI-YzQ" customClass="FeedViewController" customModule="Selfigram" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="9Mx-0P-zDa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.35579097009999999" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.93181551169999999" green="1" blue="0.59564719779999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1kY-as-z7R">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="1kY-as-z7R">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1kY-as-z7R" id="ude-uF-VSX">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -175,5 +210,6 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
