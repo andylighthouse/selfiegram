@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FeedViewController: UITableViewController {
+class FeedViewController: UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     var words = ["Hello", "my", "name", "is", "Selfigram"]
     var posts = [Post]()
@@ -53,17 +53,55 @@ class FeedViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell", for: indexPath) as! SelfieCell
         
         
         let post = posts[indexPath.row]
-        cell.imageView?.image = post.selfieImage
-        cell.textLabel?.text = post.comment
+        
+        cell.selfieImageView.image = post.selfieImage
+        cell.userNameLabel.text = post.user.userName
+        cell.commentLabel.text = post.comment
         
         
         return cell
     }
     
+    @IBAction func cameraButtonPressed(_ sender: Any) {
+        
+        let cameraControllor = UIImagePickerController()
+        
+        cameraControllor.delegate = self
+        
+        if TARGET_OS_SIMULATOR == 1{
+            cameraControllor.sourceType = .photoLibrary
+        }else{
+            cameraControllor.sourceType = .camera
+            cameraControllor.cameraDevice = .front
+            cameraControllor.cameraCaptureMode = .photo
+        }
+        
+        self.present(cameraControllor, animated: true, completion: nil)
+
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info:[String: Any]){
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+            let me = User(userName: "Andy", profileImage: UIImage(named: "car")!)
+            
+            let post = Post(selfieImage: image, user: me, comment: "pic 1")
+            
+            
+            posts.insert(post, at: 0)
+        }
+        
+        
+        dismiss(animated: true, completion: nil)
+        
+        tableView.reloadData()
+    }
     
     /*
      // Override to support conditional editing of the table view.

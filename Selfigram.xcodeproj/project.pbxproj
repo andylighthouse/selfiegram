@@ -17,6 +17,7 @@
 		A18B3C521EB311650044BDB3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C511EB311650044BDB3 /* User.swift */; };
 		A18B3C541EB311760044BDB3 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C531EB311760044BDB3 /* Post.swift */; };
 		A18B3C561EB3159D0044BDB3 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C551EB3159D0044BDB3 /* FeedViewController.swift */; };
+		A18B3C581EB3C2350044BDB3 /* SelfieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18B3C571EB3C2350044BDB3 /* SelfieCell.swift */; };
 		A1DC18FE1EB1D9F100FE5FA3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DC18FD1EB1D9F100FE5FA3 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		A18B3C511EB311650044BDB3 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A18B3C531EB311760044BDB3 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		A18B3C551EB3159D0044BDB3 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		A18B3C571EB3C2350044BDB3 /* SelfieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelfieCell.swift; sourceTree = "<group>"; };
 		A1DC18FD1EB1D9F100FE5FA3 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,6 +110,7 @@
 				A17A07061EB19AA2000E109C /* AppDelegate.swift */,
 				A17A07081EB19AA2000E109C /* ViewController.swift */,
 				A17A070A1EB19AA2000E109C /* Main.storyboard */,
+				A18B3C571EB3C2350044BDB3 /* SelfieCell.swift */,
 				A1DC18FD1EB1D9F100FE5FA3 /* ProfileViewController.swift */,
 				A18B3C551EB3159D0044BDB3 /* FeedViewController.swift */,
 				A18B3C511EB311650044BDB3 /* User.swift */,
@@ -274,6 +277,7 @@
 			files = (
 				A18B3C521EB311650044BDB3 /* User.swift in Sources */,
 				A1DC18FE1EB1D9F100FE5FA3 /* ProfileViewController.swift in Sources */,
+				A18B3C581EB3C2350044BDB3 /* SelfieCell.swift in Sources */,
 				A18B3C541EB311760044BDB3 /* Post.swift in Sources */,
 				A17A07091EB19AA2000E109C /* ViewController.swift in Sources */,
 				A18B3C561EB3159D0044BDB3 /* FeedViewController.swift in Sources */,
